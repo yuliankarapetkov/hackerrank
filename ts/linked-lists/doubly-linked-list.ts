@@ -1,11 +1,11 @@
-class DoublyLinkedListNode {
+export class DoublyLinkedListNode {
     prev: DoublyLinkedListNode = null;
     next: DoublyLinkedListNode = null;
 
     constructor(public data: number) { }
 }
 
-class DoublyLinkedList {
+export class DoublyLinkedList {
     head: DoublyLinkedListNode = null;
     tail: DoublyLinkedListNode = null;
 

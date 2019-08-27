@@ -1,3 +1,5 @@
+import { DoublyLinkedListNode } from "../doubly-linked-list";
+
 export function sortedInsert(head: DoublyLinkedListNode, data: number) {
     const node = new DoublyLinkedListNode(data);
 
@@ -28,28 +30,3 @@ export function sortedInsert(head: DoublyLinkedListNode, data: number) {
     
     return iterator === head ? node : head;
 }
-
-// export function insertNodeAtPosition(head: SinglyLinkedListNode, data: number, position: number): SinglyLinkedListNode {
-//     const node = new SinglyLinkedListNode(data);
-
-//     if (!head) {
-//         return node;
-//     }
-
-//     if (position === 0) {
-//         node.next = head;
-//         return node;
-//     }
-
-//     let iterator = head;
-
-//     while (position - 1 > 0 && iterator.next) {
-//         iterator = iterator.next;
-//         position--;
-//     }
-
-//     node.next = iterator.next;
-//     iterator.next = node;
-
-//     return head;
-// }
