@@ -8,7 +8,13 @@ export class StackQueue {
 
     get head(): number {
         this._shiftElements();
-        return this._stack2.length ? this._stack2[this._stack2.length - 1] : null;
+        const head = this._stack2.pop();
+
+        if (head) {
+            this._stack2.push(head);
+        }
+        
+        return head;
     }
 
     enqueue(data: number): void {
@@ -17,7 +23,7 @@ export class StackQueue {
 
     dequeue(): number {
         this._shiftElements();
-        return this._stack2.length ? this._stack2.pop() : null;
+        return this._stack2.pop();
     }
 
     private _shiftElements(): void {
